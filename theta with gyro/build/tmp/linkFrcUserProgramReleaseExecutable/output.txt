@@ -1,0 +1,4 @@
+See file:///C:/Users/cjoyu/Theta%202024edit/theta%20with%20gyro/build/tmp/linkFrcUserProgramReleaseExecutable/output.txt for all output for linkFrcUserProgramReleaseExecutable.
+linking frcUserProgram successful.
+
+Finished linkFrcUserProgramReleaseExecutable, see full log file:///C:/Users/cjoyu/Theta%202024edit/theta%20with%20gyro/build/tmp/linkFrcUserProgramReleaseExecutable/output.txt.
