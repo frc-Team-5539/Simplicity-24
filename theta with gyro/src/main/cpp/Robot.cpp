@@ -16,6 +16,7 @@ void Robot::RobotInit() {
 try
 {
    ahrs = new AHRS(SPI::Port::kMXP);
+  //ahrs = new AHRS(SerialPort::Port);
 }  
 //Camera
 
