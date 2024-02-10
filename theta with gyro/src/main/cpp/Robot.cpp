@@ -47,7 +47,7 @@ void Robot::RobotInit() {
   m_frontRight.SetInverted(true);
   m_rearRight.SetInverted(true);
   m_gyro.SetSensitivity(kVoltsPerDegreePerSecond);
-  //Mecanum drive is used with the gyro angle as an input. Removed m_driverController.GetLeftTriggerAxis() and replaced with m_gyro...
+  //Mecanum drive is used with the gyro angle as an input. Removed +m_driverController.GetLeftTriggerAxis() and replaced with m_gyro...
    m_robotDrive.DriveCartesian (+m_driverController.GetLeftY(), +m_driverController.GetLeftX(),
                                  +m_driverController.GetRightTriggerAxis(), m_gyro.GetRotation2d());
 
@@ -213,7 +213,7 @@ void Robot::TeleopPeriodic() {
 
 //Drive Cartesian
   m_robotDrive.DriveCartesian(+m_driverController.GetLeftX(), +m_driverController.GetLeftY(),
-                               -m_driverController.GetRightTriggerAxis() +m_driverController.GetLeftTriggerAxis());
+                               -m_driverController.GetRightTriggerAxis(), m_gyro.GetRotation2d());
 
 
 //When we calibrated XBox controller, Z-axis showed up on triggers so switched back to triggers
