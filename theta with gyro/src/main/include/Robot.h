@@ -6,6 +6,7 @@
 
 #include <string>
 
+#include "AHRS.h"
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
 #include <frc/XboxController.h>
@@ -166,6 +167,9 @@ class Robot : public frc::TimedRobot {
 
   double kGyroPort = 0.0;
   double voltage_scale_factor = 0.0;
+
+  AHRS *ahrs;
+  float yaw;
 
   //int kSize640x480 = 0;
 };
