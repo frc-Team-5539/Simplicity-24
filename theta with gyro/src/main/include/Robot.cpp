@@ -13,6 +13,11 @@ void Robot::RobotInit() {
   //m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
   //frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
 
+  try
+{
+   ahrs = new AHRS(SPI::Port::kMXP);
+    //ahrs = new AHRS(SerialPort::Port::kUSB1);
+}
 //Camera
 
   // #if defined(__linux__) || defined(_WIN32)
