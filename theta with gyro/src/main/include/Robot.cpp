@@ -18,6 +18,11 @@ void Robot::RobotInit() {
    ahrs = new AHRS(SPI::Port::kMXP);
     //ahrs = new AHRS(SerialPort::Port::kUSB1);
 }
+  catch(const std::exception& e)
+{
+    std::cerr << e.what() << '\n';
+}
+  
 //Camera
 
   // #if defined(__linux__) || defined(_WIN32)
